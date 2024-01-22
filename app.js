@@ -20,7 +20,19 @@ function displayPokemon(pokemon) {
     const pokemonHTMLString = pokemon
         .map(
             thisPoke =>
-            ` <li class="card"> <img class="card-image" src="${thisPoke.image}"/> <h2 class="card-title">${thisPoke.id}. ${thisPoke.name}</h2> <p class="card-subtitle">Type: ${thisPoke.type}</p> </li> `
+            ` <li class="card">
+            
+                <img class="card-image" src="${thisPoke.image}"/>
+
+                    <h2 class="card-title">
+                        ${thisPoke.id}. ${thisPoke.name}
+                    </h2>
+
+                    <p class="card-subtitle">
+                        Type: ${thisPoke.type}
+                    </p>
+
+            </li> `
         )
         .join("");
 
