@@ -32,6 +32,7 @@ function displayPokemon(pokemon) {
 // after array is fully populated, filter results of list to only include needed data
 Promise.all(allPokemon).then(results => {
     const pokemon = results.map(data => 
+        // wrapped in parenthesis to implicitly return the object
         ({
             name: data.name,
             id: data.id,
