@@ -16,8 +16,6 @@ for (let i = 1; i <= 150; i++) {
 
 
 function displayPokemon(pokemon) {
-    // console.log(pokemon);
-
     // build html string of all pokemon as list items using each objects properties
     const pokemonHTMLString = pokemon
         .map(
@@ -32,7 +30,6 @@ function displayPokemon(pokemon) {
 
 
 // after array is fully populated, filter results of list to only include needed data
-//  store in allPokemonCondensed as list of objects
 Promise.all(allPokemon).then(results => {
     const pokemon = results.map(data => 
         ({
@@ -43,5 +40,6 @@ Promise.all(allPokemon).then(results => {
         })
     );
 
+    // pass filtered array of objects to function
     displayPokemon(pokemon);
 });
