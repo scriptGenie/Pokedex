@@ -1,3 +1,24 @@
+.title {
+    text-align: center;
+    color: red;
+}
+
+#pokedex {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
 .card {
+    margin: 20px 0px;
     border: 1px solid black;
+    text-align: center;
+}
+
+.id-number {
+    float: right;
+    margin-right: 10px;
+    font-size: 9pt;
+    color: gold;
 }

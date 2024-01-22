@@ -25,12 +25,14 @@ function displayPokemon(pokemon) {
                 <img class="card-image" src="${thisPoke.image}"/>
 
                     <h2 class="card-title">
-                        ${thisPoke.id}. ${thisPoke.name}
+                        ${thisPoke.name}
                     </h2>
 
                     <p class="card-subtitle">
                         Type: ${thisPoke.type}
                     </p>
+
+                    <p class="id-number">${thisPoke.id} of 150</p>
 
             </li> `
         )
