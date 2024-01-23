@@ -1,6 +1,41 @@
+/* Style the video: 100% width and height to cover the entire window */
+#background-smoke {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -1;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* @font-face {
+    font-family: 'lightning-script';
+    src: url('Fonts/Lightning-Script/Lightning-Script.woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'thunder';
+    src: url('Fonts/Tasteful-Sandwich.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .title {
     text-align: center;
-    color: red;
+    color: rgba(255, 215, 0, 0.90);
+    font-family: 'thunder';
+    font-size: 80px;
+    text-decoration: underline;
 }
 
 #pokedex {
@@ -8,17 +43,123 @@
     grid-template-columns: 30% 30% 30%;
     justify-content: space-around;
     list-style-type: none;
+    /* background-color: rgba(0, 0, 0, 0); */
+    padding: 0px 0px 0px 130px;
 }
 
 .card {
     margin: 20px 0px;
-    border: 1px solid black;
+    border: 1px solid gold;
     text-align: center;
+    /* background-color: rgba(34, 34, 34, 0.98); */
+    background-color: rgba(21, 19, 19, 0.98);
+    border-radius: 15px;
+    width: 80%;
 }
+
+.card-image {
+    /* margin-top: 20px; */
+    width: 50%;
+}
+
+.card-title {
+    color: gold;
+    /* padding-top: 20px; */
+    margin-bottom: 0px;
+}
+
+.card-type {
+    font-size: 12pt;
+    margin-top: 0px;
+    margin-bottom: -20px;
+
+}
+
+
+/* evolution tiers */
+.i, .ii, .iii {
+    float: left;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: gold;
+    font-family: 'thunder';
+    font-size: 25pt;
+}
+
+
+
 
 .id-number {
     float: right;
     margin-right: 10px;
+    margin-top: 20px;
     font-size: 9pt;
     color: gold;
+}
+
+
+/* Pokemon Types */
+#type-slash {
+    color: gold;
+}
+
+.bug {
+    color: #A6B91A;
+}
+
+.dragon {
+    color: #6F35FC;
+}
+
+.electric {
+    color: #F7D02C;
+}
+
+.fighting {
+    color: #C22E28;
+}
+
+.fire {
+    color: #EE8130;
+}
+
+.flying {
+    color: #A98FF3;
+}
+
+.ghost {
+    color: #735797;
+}
+
+.grass {
+    color: #7AC74C;
+}
+
+.ground {
+    color: #E2BF65;
+}
+
+.ice {
+    color: #96D9D6;
+}
+
+.normal {
+    color: #A8A77A;
+}
+
+.poison {
+    color: #A33EA1;
+}
+
+.psychic {
+    color: #F95587;
+}
+
+.rock {
+    color: #B6A136;
+}
+
+.water {
+    color: #6390F0;
 }
