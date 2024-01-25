@@ -15,6 +15,178 @@ for (let i = 1; i <= 150; i++) {
 };
 
 
+// get & set 'badge' on card ('i', 'ii', 'iii')
+function evoTier(element) {
+    const tierOne = [
+        'bulbasaur',
+        'charmander',
+        'squirtle',
+        'caterpie',
+        'weedle',
+        'pidgey',
+        'rattata',
+        'spearow',
+        'ekans',
+        'pikachu',
+        'sandshrew',
+        'nidoran-f',
+        'nidoran-m',
+        'clefairy',
+        'vulpix',
+        'jigglypuff',
+        'zubat',
+        'oddish',
+        'paras',
+        'venonat',
+        'diglett',
+        'meowth',
+        'psyduck',
+        'mankey',
+        'growlithe',
+        'poliwag',
+        'abra',
+        'machop',
+        'bellsprout',
+        'tentacool',
+        'geodude',
+        'ponyta',
+        'slowpoke',
+        'magnemite',
+        'farfetchd',
+        'doduo',
+        'seel',
+        'grimer',
+        'shellder',
+        'gastly',
+        'onix',
+        'drowzee',
+        'krabby',
+        'voltorb',
+        'exeggcute',
+        'cubone',
+        'hitmonlee',
+        'lickitung',
+        'koffing',
+        'rhyhorn',
+        'chansey',
+        'tangela',
+        'kangaskhan',
+        'horsea',
+        'goldeen',
+        'staryu',
+        'mr-mime',
+        'scyther',
+        'jynx',
+        'electabuzz',
+        'magmar',
+        'pinsir',
+        'tauros',
+        'magikarp',
+        'lapras',
+        'ditto',
+        'eevee',
+        'porygon',
+        'omanyte',
+        'kabuto',
+        'aerodactyl',
+        'snorlax',
+        'articuno',
+        'zapdos',
+        'moltres',
+        'dratini',
+        'mewtwo'
+    ];
+
+    const tierTwo = [
+        'ivysaur',
+        'charmeleon',
+        'wartortle',
+        'metapod',
+        'kakuna',
+        'pidgeotto',
+        'raticate',
+        'fearow',
+        'arbok',
+        'raichu',
+        'sandslash',
+        'nidorina',
+        'nidorino',
+        'clefable',
+        'ninetales',
+        'wigglytuff',
+        'golbat',
+        'gloom',
+        'parasect',
+        'venomoth',
+        'dugtrio',
+        'persian',
+        'golduck',
+        'primeape',
+        'arcanine',
+        'poliwhirl',
+        'kadabra',
+        'machoke',
+        'weepinbell',
+        'tentacruel',
+        'graveler',
+        'rapidash',
+        'slowbro',
+        'magneton',
+        'dodrio',
+        'dewgong',
+        'muk',
+        'cloyster',
+        'haunter',
+        'hypno',
+        'kingler',
+        'electrode',
+        'exeggutor',
+        'marowak',
+        'hitmonchan',
+        'weezing',
+        'rhydon',
+        'seadra',
+        'seaking',
+        'starmie',
+        'gyarados',
+        'vaporeon',
+        'jolteon',
+        'flareon',
+        'omastar',
+        'kabutops',
+        'dragonair'
+    ];
+
+    const tierThree = [
+        'venusaur',
+        'charizard',
+        'blastoise',
+        'butterfree',
+        'beedrill',
+        'pidgeot',
+        'nidoqueen',
+        'nidoking',
+        'vileplume',
+        'poliwrath',
+        'alakazam',
+        'machamp',
+        'victreebel',
+        'golem',
+        'gengar',
+        'dragonite'
+    ];
+
+    // console.log(tierOne.includes(element.name));
+
+    if (tierOne.includes(element.name)) {
+        element.evolutionTier = 'i';
+    } else if (tierTwo.includes(element.name)) {
+        element.evolutionTier = 'ii';
+    } else {
+        element.evolutionTier = 'iii';
+    };
+};
+
 function displayPokemon(pokemon) {
     // build html string of all pokemon as list items using each objects properties
 
@@ -29,199 +201,30 @@ function displayPokemon(pokemon) {
             let theTypeClass = eachType.type.name;
             theTypeDisplay = theTypeClass.toUpperCase();
             
-
             if (i == 0) {
                 typeBuilder += ` <span class='${theTypeClass}'>${theTypeDisplay}</span> `
             } else {
                 typeBuilder += `<span id="type-slash">/</span> <span class='${theTypeClass}'>${theTypeDisplay}</span> `
             };
 
-            
             // console.log(`tempBuilder: ${tempBuilder}`)
         })
 
         // console.log(element.name)
 
-        const tierOne = [
-            'bulbasaur',
-            'charmander',
-            'squirtle',
-            'caterpie',
-            'weedle',
-            'pidgey',
-            'rattata',
-            'spearow',
-            'ekans',
-            'pikachu',
-            'sandshrew',
-            'nidoran-f',
-            'nidoran-m',
-            'clefairy',
-            'vulpix',
-            'jigglypuff',
-            'zubat',
-            'oddish',
-            'paras',
-            'venonat',
-            'diglett',
-            'meowth',
-            'psyduck',
-            'mankey',
-            'growlithe',
-            'poliwag',
-            'abra',
-            'machop',
-            'bellsprout',
-            'tentacool',
-            'geodude',
-            'ponyta',
-            'slowpoke',
-            'magnemite',
-            'farfetchd',
-            'doduo',
-            'seel',
-            'grimer',
-            'shellder',
-            'gastly',
-            'onix',
-            'drowzee',
-            'krabby',
-            'voltorb',
-            'exeggcute',
-            'cubone',
-            'hitmonlee',
-            'lickitung',
-            'koffing',
-            'rhyhorn',
-            'chansey',
-            'tangela',
-            'kangaskhan',
-            'horsea',
-            'goldeen',
-            'staryu',
-            'mr-mime',
-            'scyther',
-            'jynx',
-            'electabuzz',
-            'magmar',
-            'pinsir',
-            'tauros',
-            'magikarp',
-            'lapras',
-            'ditto',
-            'eevee',
-            'porygon',
-            'omanyte',
-            'kabuto',
-            'aerodactyl',
-            'snorlax',
-            'articuno',
-            'zapdos',
-            'moltres',
-            'dratini',
-            'mewtwo'
-        ];
-        const tierTwo = [
-            'ivysaur',
-            'charmeleon',
-            'wartortle',
-            'metapod',
-            'kakuna',
-            'pidgeotto',
-            'raticate',
-            'fearow',
-            'arbok',
-            'raichu',
-            'sandslash',
-            'nidorina',
-            'nidorino',
-            'clefable',
-            'ninetales',
-            'wigglytuff',
-            'golbat',
-            'gloom',
-            'parasect',
-            'venomoth',
-            'dugtrio',
-            'persian',
-            'golduck',
-            'primeape',
-            'arcanine',
-            'poliwhirl',
-            'kadabra',
-            'machoke',
-            'weepinbell',
-            'tentacruel',
-            'graveler',
-            'rapidash',
-            'slowbro',
-            'magneton',
-            'dodrio',
-            'dewgong',
-            'muk',
-            'cloyster',
-            'haunter',
-            'hypno',
-            'kingler',
-            'electrode',
-            'exeggutor',
-            'marowak',
-            'hitmonchan',
-            'weezing',
-            'rhydon',
-            'seadra',
-            'seaking',
-            'starmie',
-            'gyarados',
-            'vaporeon',
-            'jolteon',
-            'flareon',
-            'omastar',
-            'kabutops',
-            'dragonair'
-        ];
-        const tierThree = [
-            'venusaur',
-            'charizard',
-            'blastoise',
-            'butterfree',
-            'beedrill',
-            'pidgeot',
-            'nidoqueen',
-            'nidoking',
-            'vileplume',
-            'poliwrath',
-            'alakazam',
-            'machamp',
-            'victreebel',
-            'golem',
-            'gengar',
-            'dragonite'
-        ];
-
-        console.log(tierOne.includes(element.name))
-
-        if (tierOne.includes(element.name)) {
-            element.evolutionTier = 'i'
-        } else if (tierTwo.includes(element.name)) {
-            element.evolutionTier = 'ii'
-        } else {
-            element.evolutionTier = 'iii'
-        }
-
-
-
-
-
-        // create object key properName with a value of pokemons name converted to propercase using regex word boundary (mr-mime => Mr-Mime)
+        // create object key 'properName' with a value of pokemon's name converted to propercase using regex word boundary (mr-mime => Mr-Mime)
         element.properName = element.name.replace(/\b[\w']+\b/g, function(txt){
             return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-        })
+        });
 
-        element.newType = typeBuilder
-        typeBuilder = ''
+        // set evolution tier 'badge' in top left ('i', 'ii', 'iii')
+        evoTier(element);
+
+        // add a newType property to each object, assigning it the value of typeBuilder - then reset typeBuilder
+        element.newType = typeBuilder;
+        typeBuilder = '';
     });
-
+    
     const pokemonHTMLString = pokemon
         .map(
             thisPoke =>
@@ -245,7 +248,6 @@ function displayPokemon(pokemon) {
         )
         .join("");
 
-
     // add our list elements to the unordered list pokedex
     pokedex.innerHTML = pokemonHTMLString;
 };
@@ -266,46 +268,3 @@ Promise.all(allPokemon).then(results => {
     // pass filtered array of objects to function
     displayPokemon(pokemon);
 });
-
-
-
-function getEvolutionsOnce() {
-    let evoURLS = [];
-    let evoTwoNames = [];
-    let evoThreeNames = [];
-
-
-    for (let i = 1; i <= 20; i++) {
-        const getURL = 'https://pokeapi.co/api/v2/evolution-chain/' + i;
-
-        evoURLS.push(
-            fetch(getURL)
-                .then(res => res.json())
-                // .then(function eachChain(result) {
-                //     console.log('/n')
-                //         if (result.chain.evolves_to) {
-                //             evoTwoNames.push(result.chain.evolves_to[0].species.name)
-                //             console.log(result.chain.evolves_to[0].species.name)
-                //         }
-
-                //         if (result.chain.evolves_to[0].evolves_to[0]) {
-                //             evoThreeNames.push(result.chain.evolves_to[0].evolves_to[0].species.name)
-                //             console.log(result.chain.evolves_to[0].evolves_to[0].species.name)
-                //         }
-
-                //         console.log(evoTwoNames)
-                //         console.log(evoThreeNames)
-
-                    
-                // })
-        );
-    }
-
-    Promise.all(evoURLS).then(results => {
-
-
-    })
-
-};
-
-getEvolutionsOnce()

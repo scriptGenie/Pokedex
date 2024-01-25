@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'adventure_script';
+    src: url('Fonts/AdventureScript.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tasteful-sandwich';
+    src: url('Fonts/Tasteful-Sandwich.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Style the video: 100% width and height to cover the entire window */
 #background-smoke {
     position: fixed;
@@ -16,25 +30,13 @@ body {
     background-color: rgba(0, 0, 0, 0);
 }
 
-/* @font-face {
-    font-family: 'lightning-script';
-    src: url('Fonts/Lightning-Script/Lightning-Script.woff');
-    font-weight: normal;
-    font-style: normal;
-} */
-
-@font-face {
-    font-family: 'thunder';
-    src: url('Fonts/Tasteful-Sandwich.woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .title {
     text-align: center;
     color: rgba(255, 215, 0, 0.90);
-    font-family: 'thunder';
+    font-family: 'tasteful-sandwich';
     font-size: 80px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
     text-decoration: underline;
 }
 
@@ -52,25 +54,42 @@ body {
     border: 1px solid gold;
     text-align: center;
     /* background-color: rgba(34, 34, 34, 0.98); */
-    background-color: rgba(21, 19, 19, 0.98);
+    /* background-color: rgba(21, 19, 19, 0.98); */
     border-radius: 15px;
     width: 80%;
+    height: 87%;
+    background-image: url("/Images/card-background_1.jpg");
+    background-size: cover;
+    background-position: -15px -18px;
+    opacity: 79%;
+    z-index: 0;
 }
 
 .card-image {
-    /* margin-top: 20px; */
+    position: relative;
+    top: 40px;
     width: 50%;
+    opacity: 90%;
 }
 
+
+
+
 .card-title {
-    color: gold;
-    /* padding-top: 20px; */
+    color: rgb(255, 255, 255);
+    font-family: 'adventure_script';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40pt;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: gold;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .card-type {
     font-size: 12pt;
-    margin-top: 0px;
+    margin-top: 5px;
     margin-bottom: -20px;
 
 }
@@ -83,7 +102,7 @@ body {
     margin-left: 20px;
     margin-top: 10px;
     color: gold;
-    font-family: 'thunder';
+    font-family: 'tasteful-sandwich';
     font-size: 25pt;
 }
 
